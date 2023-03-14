@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const StyledPartners = styled.section`
-  margin: auto;
-  max-width: 1200px;
+const StyledPartners = styled.div`
   text-align: center;
   margin-top: 40px;
   .images {

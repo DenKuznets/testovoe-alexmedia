@@ -79,6 +79,11 @@ body {
   overflow-x: hidden;
 }
 
+#prices, #partners {
+  box-shadow: none;
+  border-radius: 0;
+}
+
 h1 {
   font-weight: 900;
   font-size: 60px;

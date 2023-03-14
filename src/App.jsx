@@ -2,6 +2,7 @@ import "./App.css";
 import EasyWork from "./components/EasyWork";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Prices from "./components/Prices";
 import Partners from "./components/styled/Partners.styled";
 import Section from "./components/styled/Section.styled";
 import WhyUs from "./components/WhyUs";
@@ -207,7 +208,12 @@ function App() {
         {/* <Section id="easy-work">
           <EasyWork />
         </Section> */}
-        {/* <Partners id="partners" /> */}
+        {/* <Section id="partners">
+          <Partners />
+        </Section> */}
+        <Section id="prices">
+          <Prices />
+        </Section>
       </main>
     </div>
   );
