@@ -36,6 +36,7 @@ const Header = () => {
 
   function handleCloseBtnClick() {
     setMobile(false);
+    // resume page scrolling
     if (typeof window != "undefined" && window.document) {
       document.body.style.overflow = "";
     }

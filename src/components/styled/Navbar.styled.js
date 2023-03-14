@@ -20,6 +20,7 @@ export const DesktopNavbar = styled.nav`
     color: #03032c;
     
     &:hover {
+      font-weight: 700;
       color: #5d5fef;
     }
   }

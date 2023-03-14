@@ -1,12 +1,14 @@
-import './App.css'
-import Header from './components/Header'
+import "./App.css";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Section from "./components/styled/Section.styled";
 
 function App() {
-
   return (
     <div className="App">
       <Header />
-      <div>
+      {/* dummy text */}
+      {/* <div>
         Результатов: примерно 96 700 000 (0,30 сек.) Как на самом деле работает
         position: sticky в CSS - Medium medium.com https://medium.com ›
         sticky-bc7ff7088693 31 янв. 2019 г. — У position: sticky уже очень
@@ -191,9 +193,14 @@ function App() {
         запросы position: sticky not working position: sticky codepen position:
         sticky example position: sticky height position это position: sticky
         right position sticky caniuse position: sticky js 1 2 3 4 5 6 Следующая
-      </div>
+      </div> */}
+      <main>
+        <Section id="page-first-screen">
+          <Hero/>
+        </Section>
+      </main>
     </div>
   );
 }
 
-export default App
+export default App;
