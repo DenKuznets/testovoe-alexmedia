@@ -2,19 +2,21 @@ import StyledHeader from "./styled/Header.styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import { useRef, useEffect, useState } from "react";
+import Navbar from "./Navbar";
 
 const Header = () => {
   const header = useRef("");
   // ширина заголовка
-  const [fullWidth, setFullWidth] = useState(false);
+  const [headerFullWidth, setHeaderFullWidth] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       if (header) {
         if (header.current.getBoundingClientRect().top === 0) {
-          setFullWidth(true);
+          setHeaderFullWidth(true);
         } else {
-          setFullWidth(false)
+          setHeaderFullWidth(false);
         }
       }
     };
@@ -22,10 +24,25 @@ const Header = () => {
     window.removeEventListener("scroll", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, []); 
+
+  function handleBurgerClick() {
+    setMobile(true);
+    // prevent page background scrolling
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function handleCloseBtnClick() {
+    setMobile(false);
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "";
+    }
+  }
 
   return (
-    <StyledHeader fullWidth={fullWidth} ref={header}>
+    <StyledHeader fullWidth={headerFullWidth} ref={header}>
       <div className="logo">
         <div className="logo__name">
           Alex <br /> Media
@@ -35,32 +52,13 @@ const Header = () => {
           Веб-студия <br /> Создание сайтов под ключ
         </div>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Главная</a>
-          </li>
-          <li>
-            <a href="#">Разработка</a>
-          </li>
-          <li>
-            <a href="#">Продвижение</a>
-          </li>
-          <li>
-            <a href="#">Портфолио</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar mobile={mobile} onCloseBtnClick={handleCloseBtnClick} />
       <div className="contacts">8 (800) 000 00-00</div>
-      <div className="menu">
+      <div className="burger" onClick={handleBurgerClick}>
         <IconContext.Provider
           value={{
             size: "2em",
             color: "rgb(93,96,239)",
-            className: "global-class-name",
           }}
         >
           <div>

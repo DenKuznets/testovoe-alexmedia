@@ -47,37 +47,13 @@ const StyledHeader = styled.header`
     }
   }
 
-  nav {
-    @media (max-width: 1024px) {
-      display: none;
-    }
-    ul {
-      display: flex;
-      list-style: none;
-      gap: 37px;
-      padding: 0;
-    }
-    li {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 17px;
-    }
-    a {
-      text-decoration: none;
-      color: #03032c;
-      &:hover {
-        color: #5d5fef;
-      }
-    }
-  }
-
   .contacts {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
   }
 
-  .menu {
+  .burger {
     display: none;
     cursor: pointer;
     @media (max-width: 1024px) {
