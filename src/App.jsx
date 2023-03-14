@@ -1,5 +1,6 @@
 import "./App.css";
 import EasyWork from "./components/EasyWork";
+import Feedback from "./components/Feedback";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Prices from "./components/Prices";
@@ -211,8 +212,11 @@ function App() {
         {/* <Section id="partners">
           <Partners />
         </Section> */}
-        <Section id="prices">
+        {/* <Section id="prices">
           <Prices />
+        </Section> */}
+        <Section id="form">
+          <Feedback/>
         </Section>
       </main>
     </div>
