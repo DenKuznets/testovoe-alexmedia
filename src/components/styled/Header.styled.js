@@ -5,7 +5,6 @@ const StyledHeader = styled.header`
   padding: 0 28px 0 10px;
   align-items: center;
   justify-content: space-between;
-  color: #03032c;
   background: #ffffff;
   box-shadow: 5px 5px 20px rgba(30, 83, 210, 0.1);
   border-radius: 20px;
@@ -17,6 +16,7 @@ const StyledHeader = styled.header`
   margin-top: 10px;
   position: sticky;
   top: 0;
+  z-index: 1;
   /* outline: 1px solid red; */
   @media (max-width: 1024px) {
     justify-content: start;

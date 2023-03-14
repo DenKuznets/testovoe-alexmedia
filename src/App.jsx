@@ -2,6 +2,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Section from "./components/styled/Section.styled";
+import WhyUs from "./components/WhyUs";
+
 
 function App() {
   return (
@@ -195,8 +197,11 @@ function App() {
         right position sticky caniuse position: sticky js 1 2 3 4 5 6 Следующая
       </div> */}
       <main>
-        <Section id="page-first-screen">
+        {/* <Section id="hero">
           <Hero/>
+        </Section> */}
+        <Section id="why-us">
+          <WhyUs />
         </Section>
       </main>
     </div>

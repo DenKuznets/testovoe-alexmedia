@@ -6,7 +6,7 @@ const Navbar = (props) => {
   const items = (
     <ul>
       <li>
-        <a href="#page-first-screen">Главная</a>
+        <a href="#hero">Главная</a>
       </li>
       <li>
         <a href="#">Разработка</a>
