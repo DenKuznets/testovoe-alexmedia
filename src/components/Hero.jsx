@@ -1,5 +1,6 @@
 import Button from "./styled/Button.styled";
 import HeroStyled from "./styled/Hero.styled";
+import Polygon from "./Polygon";
 
 const Hero = () => {
   return (
@@ -11,23 +12,11 @@ const Hero = () => {
           <li>Работаем с любым форматом, от лендинга до интернет-магазина</li>
           <li>Поддерживаем вас после запуска сайта</li>
         </ul>
-      </div>      
+      </div>
       <Button>Оставить заявку</Button>
-      <img
-        className="polygon2"
-        src="./images/Polygon2.svg"
-        alt="colored shape"
-      />
-      <img
-        className="polygon4"
-        src="./images/Polygon4.svg"
-        alt="colored shape"
-      />
-      <img
-        className="polygon3"
-        src="./images/Polygon3.svg"
-        alt="colored shape"
-      />
+      <Polygon number={2} />
+      <Polygon number={3} />
+      <Polygon number={4} />
     </HeroStyled>
   );
 };
