@@ -9,7 +9,7 @@ const Navbar = (props) => {
         <a href="#hero">Главная</a>
       </li>
       <li>
-        <a href="#">Разработка</a>
+        <a href="#why-us">Разработка</a>
       </li>
       <li>
         <a href="#">Продвижение</a>

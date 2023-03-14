@@ -1,9 +1,10 @@
 import "./App.css";
+import EasyWork from "./components/EasyWork";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Partners from "./components/styled/Partners.styled";
 import Section from "./components/styled/Section.styled";
 import WhyUs from "./components/WhyUs";
-
 
 function App() {
   return (
@@ -200,9 +201,13 @@ function App() {
         {/* <Section id="hero">
           <Hero/>
         </Section> */}
-        <Section id="why-us">
+        {/* <Section id="why-us">
           <WhyUs />
-        </Section>
+        </Section> */}
+        {/* <Section id="easy-work">
+          <EasyWork />
+        </Section> */}
+        {/* <Partners id="partners" /> */}
       </main>
     </div>
   );

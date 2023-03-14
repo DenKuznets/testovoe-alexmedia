@@ -1,71 +1,52 @@
 import styled from "styled-components";
 
 const HeroStyled = styled.div`
-  background: url(./images/first-page.png),
-    linear-gradient(106.35deg, #e3ffec 0%, #effff3 100%);
-  background-size: 60%, 100%;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 96%;
-  height: 650px;
-  width: 100%;
-  position: relative;
-  padding-left: 15px;
-
+  background: linear-gradient(106deg, #e3ffec 0%, #effff3 100%);
   margin-top: 30px;
-
+  min-height: 650px;
+  padding-left: 15px;
+  padding-right: 23px;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
   @media (max-width: 768px) {
-    background: linear-gradient(106.35deg, #e3ffec 0%, #effff3 100%);
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  img {
-    position: absolute;
+    padding-bottom: 20px;
   }
 
-  .polygon2 {
-    top: -5px;
-    left: -70px;
+  .hero__hero-image {
+    max-width: 65%;
   }
 
-  .polygon3 {
-    top: 85%;
-    left: 5%;
-  }
-
-  .polygon4 {
-    top: 0;
-    left: 95%;
+  .hero__btn {
+    margin-top: 20px;
   }
 
   .hero__hero-text {
-    max-width: 704px;
-    padding-top: 1px;
+    left: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;    
+
     @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
+      position: relative;
+      text-align: center;
+      /* justify-content: center; */
       align-items: center;
     }
+
     h1 {
       margin-top: 126px;
-      font-weight: 900;
-      font-size: 60px;
-      line-height: 73px;
-      @media (max-width: 768px) {
-        font-size: 48px;
-      }
-      @media (max-width: 480px) {
-        font-size: 32px;
-      }
+       @media (max-width: 768px) {
+        margin-top: 20px;
+       }
     }
 
     ul {
       text-align: start;
       margin-top: 25px;
-      padding-left: 40px;
+      padding-left: 20px;
       list-style-image: url(./images/list-dot.svg);
       li {
         font-weight: 400;
@@ -76,6 +57,21 @@ const HeroStyled = styled.div`
         padding-left: 10px;
       }
     }
+  }
+
+  .polygon2 {
+    top: -5px;
+    left: -70px;
+  }
+
+  .polygon3 {
+    top: 90%;
+    left: 5%;
+  }
+
+  .polygon4 {
+    top: 0;
+    left: 95%;
   }
 `;
 

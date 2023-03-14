@@ -1,21 +1,18 @@
 import styled from "styled-components";
 
 const StyledWhyUs = styled.div`
-  height: 522px;
+  min-height: 522px;
   padding: 50px 75px 50px 15px;
   background: linear-gradient(106.35deg, #f6fffd 0%, #ffffff 100%);
   margin-top: 70px;
   position: relative;
+  @media (max-width: 1024px) {
+
+  }
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  h2 {
-    font-weight: 900;
-    font-size: 35px;
-    line-height: 50px;
   }
 
   .polygon2 {
@@ -55,20 +52,7 @@ const StyledWhyUs = styled.div`
       }
     }
 
-    h3 {
-      font-weight: 900;
-      font-size: 28px;
-      line-height: 34px;
-      @media (max-width: 768px) {
-        font-size: 22px;
-      }
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 25px;
-    }
+    
   }
 `;
 

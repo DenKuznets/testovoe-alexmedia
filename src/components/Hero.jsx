@@ -6,14 +6,19 @@ const Hero = () => {
   return (
     <HeroStyled className="hero">
       <div className="hero__hero-text">
-        <h1>Ваши клиенты должны знать о Вас!</h1>
+        <h1>
+          Ваши клиенты <br /> должны знать о Вас!
+        </h1>
         <ul>
           <li>Разрабатываем сайты под ключ</li>
           <li>Работаем с любым форматом, от лендинга до интернет-магазина</li>
           <li>Поддерживаем вас после запуска сайта</li>
         </ul>
+        <Button className="hero__btn">Оставить заявку</Button>
       </div>
-      <Button>Оставить заявку</Button>
+      <div className="hero__hero-image">
+        <img src="./images/hero.png" alt="" />
+      </div>
       <Polygon number={2} />
       <Polygon number={3} />
       <Polygon number={4} />
