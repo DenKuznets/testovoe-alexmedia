@@ -1,29 +1,31 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Button from "./styled/Button.styled";
 import StyledFeedback from "./styled/Feedback.styled";
 import Question from "./styled/Question.styled";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
+import Popup from "./styled/Popup.styled";
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
+  const form = useRef('');
   let questionsText = [];
   for (let index = 0; index < 4; index++) {
     questionsText.push(`Вопрос${index + 1}`);
   }
   let questionElements = questionsText.map((obj, index) => {
     return <Question obj={obj} key={index} />;
-  });  
+  });
 
   function handleSubmit(e) {
     e.preventDefault();
     let form = e.target;
     let regexp =
       /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-    console.log(regexp.test(form.elements.phone.value));
+
     if (regexp.test(form.elements.phone.value)) {
-      form.submit();
+      setShowPopup(true);      
     } else {
       setCorrect(false);
     }
@@ -31,15 +33,16 @@ const Feedback = () => {
 
   return (
     <StyledFeedback correct={correct}>
+      {showPopup && <Popup form={form} closePopup={() => setShowPopup(false)} />}
       <div className="form-container">
         <h2>Позвоним в удобное время</h2>
         <p>
           Заполните форму обратной связи и уточните время, когда удобно
           поговорить.
         </p>
-        <form className="feedback-form" onSubmit={(e) => handleSubmit(e)}>
+        <form ref={form} className="feedback-form" onSubmit={(e) => handleSubmit(e)}>
           <input
-            onFocus={()=>setCorrect(true)}
+            onFocus={() => setCorrect(true)}
             className="form__phone"
             name="phone"
             required
@@ -64,8 +67,7 @@ const Feedback = () => {
           </div>
           <input
             className="form__comment"
-            name="comment"
-            required
+            name="comment"            
             placeholder="Комментарий"
             type="text"
           />
