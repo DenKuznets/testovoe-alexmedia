@@ -5,6 +5,7 @@ import Feedback from "./components/Feedback";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Prices from "./components/Prices";
+import Footer from "./components/styled/Footer.styled";
 import Partners from "./components/styled/Partners.styled";
 import Section from "./components/styled/Section.styled";
 import WhyUs from "./components/WhyUs";
@@ -36,6 +37,11 @@ function App() {
           <ContactUs/>
         </Section>
       </main>
+      <footer>
+        <Section id="footer">
+          <Footer/>
+        </Section>
+      </footer>
     </div>
   );
 }

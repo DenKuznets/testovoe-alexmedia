@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IconContext } from "react-icons";
 import { useRef, useEffect, useState } from "react";
 import Navbar from "./Navbar";
+import Logo from "./styled/Logo.styled";
 
 const Header = () => {
   const header = useRef("");
@@ -44,15 +45,7 @@ const Header = () => {
 
   return (
     <StyledHeader fullWidth={headerFullWidth} ref={header}>
-      <div className="logo">
-        <div className="logo__name">
-          Alex <br /> Media
-        </div>
-        <div className="logo__devider"></div>
-        <div className="logo__text">
-          Веб-студия <br /> Создание сайтов под ключ
-        </div>
-      </div>
+      <Logo />
       <Navbar mobile={mobile} onCloseBtnClick={handleCloseBtnClick} />
       <div className="contacts">8 (800) 000 00-00</div>
       <div className="burger" onClick={handleBurgerClick}>
