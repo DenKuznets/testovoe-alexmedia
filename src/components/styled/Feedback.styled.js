@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledFeedback = styled.div`
+  position: relative;
   display: flex;
   margin-top: 70px;
   gap: 62px;
@@ -23,9 +24,13 @@ const StyledFeedback = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    h2 {
+      z-index: 2;
+    }
     p {
       margin-top: 40px;
       max-width: 470px;
+      z-index: 2;
     }
     form {
       display: flex;
@@ -57,7 +62,7 @@ const StyledFeedback = styled.div`
   }
 
   .incorrect-phone {
-    display: ${(props) => (props.correct ? 'none' : "flex")};
+    display: ${(props) => (props.correct ? "none" : "flex")};
     margin-top: 5px;
     color: red;
     /* display: flex; */
@@ -78,6 +83,21 @@ const StyledFeedback = styled.div`
     flex-direction: column;
     flex: 1;
     width: 100%;
+  }
+
+  .polygon1 {
+    top: 80%;
+    left: 80%;
+  }
+  .polygon2 {
+    top: -10%;
+    z-index: -1;
+    left: 90%;
+  }
+  .polygon4 {
+    top: 25%;
+    z-index: 1;
+    left: -5%;   
   }
 `;
 export default StyledFeedback;

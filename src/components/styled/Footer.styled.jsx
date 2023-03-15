@@ -6,6 +6,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 10px;
+margin-top: 100px;
+margin-bottom: 20px;
 `
 
 const Footer = () => {

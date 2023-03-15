@@ -17,6 +17,7 @@ const StyledQuestion = styled.div`
     justify-content: space-between;
     display: flex;
     img {
+      cursor: pointer;
       width: 15px;
     }
   }

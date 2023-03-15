@@ -73,10 +73,16 @@ select {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   overflow-x: hidden;
+  
 }
 
 #prices, #partners {

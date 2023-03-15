@@ -65,8 +65,8 @@ const StyledContactUs = styled.div`
       flex: unset;
       position: static;
       width: 80%;
-      margin: auto;
-      margin-top: 20px;
+      /* margin: auto; */
+      margin: 20px auto;
       height: 350px;
       transform: none;
     }

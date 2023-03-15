@@ -6,19 +6,19 @@ const Navbar = (props) => {
   const items = (
     <ul>
       <li>
-        <a href="#hero">Главная</a>
+        <a href="#">Главная</a>
       </li>
       <li>
         <a href="#why-us">Разработка</a>
       </li>
       <li>
-        <a href="#">Продвижение</a>
+        <a href="#easy-work">Продвижение</a>
       </li>
       <li>
-        <a href="#">Портфолио</a>
+        <a href="#prices">Портфолио</a>
       </li>
       <li>
-        <a href="#">Контакты</a>
+        <a href="#contact-us">Контакты</a>
       </li>
     </ul>
   );

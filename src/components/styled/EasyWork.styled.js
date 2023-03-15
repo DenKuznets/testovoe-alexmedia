@@ -32,6 +32,9 @@ const EasyWorkStyled = styled.div`
 
     h2 {
       margin-top: 126px;      
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
     }
 
     p{

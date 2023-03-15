@@ -15,24 +15,24 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        {/* <Section id="hero">
+        <Section id="hero">
           <Hero/>
-        </Section> */}
-        {/* <Section id="why-us">
+        </Section>
+        <Section id="why-us">
           <WhyUs />
-        </Section> */}
-        {/* <Section id="easy-work">
+        </Section>
+        <Section id="easy-work">
           <EasyWork />
-        </Section> */}
-        {/* <Section id="partners">
+        </Section>
+        <Section id="partners">
           <Partners />
-        </Section> */}
-        {/* <Section id="prices">
+        </Section>
+        <Section id="prices">
           <Prices />
-        </Section> */}
-        {/* <Section id="form">
+        </Section>
+        <Section id="form">
           <Feedback/>
-        </Section> */}
+        </Section>
         <Section id="contact-us">
           <ContactUs/>
         </Section>

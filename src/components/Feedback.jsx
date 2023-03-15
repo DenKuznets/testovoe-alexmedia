@@ -5,6 +5,7 @@ import Question from "./styled/Question.styled";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Popup from "./styled/Popup.styled";
+import Polygon from "./Polygon";
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
@@ -75,6 +76,9 @@ const Feedback = () => {
         </form>
       </div>
       <div className="questions-container">{questionElements}</div>
+      <Polygon number={1} />
+      <Polygon number={2} />
+      <Polygon number={4} />
     </StyledFeedback>
   );
 };

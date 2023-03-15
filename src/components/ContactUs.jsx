@@ -24,9 +24,15 @@ const ContactUs = () => {
         </div>
 
         <div className="icons-container">
-          <img src="./images/inst.png" alt="" />
-          <img src="./images/vk-icon.png" alt="" />
-          <img src="./images/fb-icon.png" alt="" />
+          <a href="https://www.instagram.com/">
+            <img src="./images/inst.png" alt="" />
+          </a>
+          <a href="https://www.vk.com/">
+            <img src="./images/vk-icon.png" alt="" />
+          </a>
+          <a href="https://www.facebook.com/">
+            <img src="./images/fb-icon.png" alt="" />
+          </a>
         </div>
       </div>
       <iframe
