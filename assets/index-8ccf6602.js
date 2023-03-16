@@ -208,6 +208,9 @@ Error generating stack: `+i.message+`
   &:active {
     transform: scale(0.95);
   }
+  /* &:focus {
+    transform: scale(0.95);
+  } */
 `,Em=Re.div`
   position: relative;
   display: flex;
@@ -354,6 +357,9 @@ Error generating stack: `+i.message+`
     align-items: center;
     padding: 50px 30px;
     border-radius: 30px;
+    @media (max-width: 480px) {
+      width: 90%;
+    }
     h3,
     h4,
     button,
@@ -384,7 +390,7 @@ Error generating stack: `+i.message+`
   .close-btn {
     position: absolute;
     top: 5%;
-    left: 90%;
+    left: 85%;
     cursor: pointer;
   }
 `,Om=e=>{const t=re.useRef("");function n(l){l.target.classList.contains("popup")&&e.closePopup()}function r(){t.current.value==="4"&&e.form.current.submit()}return v(Rm,{className:"popup",onClick:l=>n(l),children:U("div",{className:"popup-container",children:[v("h3",{children:"Подтвердите что вы не робот. Ответьте на вопрос"}),v("h4",{children:"Сколько будет два плюс два?"}),v("input",{ref:t,type:"text"}),v(Si,{onClick:r,children:"Ответить"}),v(Wn.Provider,{value:{size:"2em",color:"black",className:"close-btn"},children:v("div",{className:"close-btn",onClick:e.closePopup,children:v(Tm,{})})})]})})},$m=()=>{const[e,t]=re.useState(!0),[n,r]=re.useState(!1),l=re.useRef("");let i=[];for(let a=0;a<4;a++)i.push(`Вопрос${a+1}`);let o=i.map((a,c)=>v(Pm,{obj:a},c));re.useEffect(()=>(n&&Wf(),n||eu(),()=>{eu()}),[n]);function u(a){a.preventDefault();let c=a.target;/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(c.elements.phone.value)?r(!0):t(!1)}return U(Em,{correct:e,children:[v(vt,{number:1}),v(vt,{number:2}),v(vt,{number:4}),n&&v(Om,{form:l,closePopup:()=>r(!1)}),U("div",{className:"form-container",children:[v("h2",{children:"Позвоним в удобное время"}),v("p",{children:"Заполните форму обратной связи и уточните время, когда удобно поговорить."}),U("form",{ref:l,className:"feedback-form",onSubmit:a=>u(a),children:[v("input",{onFocus:()=>t(!0),className:"form__phone",name:"phone",required:!0,placeholder:"Телефон",type:"tel"}),U("div",{className:"incorrect-phone",children:[v("span",{children:v(Wn.Provider,{value:{size:"1em",color:"red",className:"close-btn"},children:v("div",{children:v(Lm,{})})})}),v("p",{children:"Пожалуйста введите правильный номер телефона"})]}),v("input",{className:"form__comment",name:"comment",placeholder:"Комментарий",type:"text"}),v(Si,{children:"Оставить заявку"})]})]}),v("div",{className:"questions-container",children:o})]})},Am=Re.header`
@@ -406,12 +412,15 @@ Error generating stack: `+i.message+`
   z-index: 999;
   @media (max-width: 1024px) {
     justify-content: start;
-  }  
+  }
 
   .contacts {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 
   .burger {
@@ -420,6 +429,9 @@ Error generating stack: `+i.message+`
     @media (max-width: 1024px) {
       display: block;
       margin-left: 40px;
+    }
+    @media (max-width: 480px) {
+      margin-left: 5px;
     }
   }
 `;function Im(e){return ki({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"}}]})(e)}const Mm=Re.nav`
@@ -483,6 +495,7 @@ Error generating stack: `+i.message+`
 `;function Dm(e){return ki({tag:"svg",attr:{version:"1.1",viewBox:"0 0 17 17"},child:[{tag:"g",attr:{},child:[]},{tag:"path",attr:{d:"M9.207 8.5l6.646 6.646-0.707 0.707-6.646-6.646-6.646 6.646-0.707-0.707 6.646-6.646-6.647-6.646 0.707-0.707 6.647 6.646 6.646-6.646 0.707 0.707-6.646 6.646z"}}]})(e)}const Fm=e=>{const t=U("ul",{children:[v("li",{children:v("a",{onClick:e.handleLinkClick,href:"#",children:"Главная"})}),v("li",{children:v("a",{onClick:e.handleLinkClick,href:"#why-us",children:"Разработка"})}),v("li",{children:v("a",{onClick:e.handleLinkClick,href:"#easy-work",children:"Продвижение"})}),v("li",{children:v("a",{onClick:e.handleLinkClick,href:"#prices",children:"Портфолио"})}),v("li",{children:v("a",{onClick:e.handleLinkClick,href:"#contact-us",children:"Контакты"})})]});return e.mobile?v(jm,{children:U(Wn.Provider,{value:{size:"2em",color:"rgb(189,189,239)",className:"close-btn"},children:[v("div",{children:v(Dm,{onClick:e.onCloseBtnClick})}),t]})}):v(Mm,{children:t})},Um=Re.div`
   display: flex;
   align-items: center;
+
   @media (max-width: 1024px) {
     margin-right: auto;
   }
@@ -502,8 +515,11 @@ Error generating stack: `+i.message+`
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
-`,Yf=()=>U(Um,{className:"logo",children:[U("div",{className:"logo__name",children:["Alex ",v("br",{})," Media"]}),v("div",{className:"logo__devider"}),U("div",{className:"logo__text",children:["Веб-студия ",v("br",{})," Создание сайтов под ключ"]})]}),Bm=()=>{const e=re.useRef(""),[t,n]=re.useState(!1),[r,l]=re.useState(!1);re.useEffect(()=>{const u=()=>{console.log("scroll"),e&&(e.current.getBoundingClientRect().top<=0?n(!0):n(!1))};return window.addEventListener("scroll",u,{passive:!0}),()=>window.removeEventListener("scroll",u)},[]);function i(){l(!0),Wf()}function o(){l(!1),eu()}return U(Am,{fullWidth:t,ref:e,children:[v(Yf,{}),v(Fm,{handleLinkClick:o,mobile:r,onCloseBtnClick:o}),v("div",{className:"contacts",children:"8 (800) 000 00-00"}),v("div",{className:"burger",onClick:i,children:v(Wn.Provider,{value:{size:"2em",color:"rgb(93,96,239)"},children:v("div",{children:v(Im,{})})})})]})},Hm=Re.div`
+`,Yf=()=>U(Um,{className:"logo",children:[U("div",{className:"logo__name",children:["Alex ",v("br",{})," Media"]}),v("div",{className:"logo__devider"}),U("div",{className:"logo__text",children:["Веб-студия ",v("br",{})," Создание сайтов под ключ"]})]}),Bm=()=>{const e=re.useRef(""),[t,n]=re.useState(!1),[r,l]=re.useState(!1);re.useEffect(()=>{const u=()=>{e&&(e.current.getBoundingClientRect().top<=0?n(!0):n(!1))};return window.addEventListener("scroll",u,{passive:!0}),()=>window.removeEventListener("scroll",u)},[]);function i(){l(!0),Wf(),console.log(e.current.querySelector("nav"))}function o(){l(!1),eu()}return U(Am,{fullWidth:t,ref:e,children:[v(Yf,{}),v(Fm,{handleLinkClick:o,mobile:r,onCloseBtnClick:o}),v("div",{className:"contacts",children:"8 (800) 000 00-00"}),v("div",{className:"burger",onClick:i,children:v(Wn.Provider,{value:{size:"2em",color:"rgb(93,96,239)"},children:v("div",{children:v(Im,{})})})})]})},Hm=Re.div`
   background: linear-gradient(106deg, #e3ffec 0%, #effff3 100%);
   margin-top: 30px;
   min-height: 650px;
@@ -512,7 +528,6 @@ Error generating stack: `+i.message+`
   display: flex;
   position: relative;
   justify-content: flex-end;
-  z-index: -2;
   border-radius: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
