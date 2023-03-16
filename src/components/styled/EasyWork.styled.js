@@ -18,12 +18,14 @@ const EasyWorkStyled = styled.div`
 
   .easywork__easywork-image {
     margin-top: 50px;
+    position: relative;
   }
 
   .easywork__easywork-text {
     display: flex;
     flex-direction: column;
     max-width: 40%;
+    position: relative;
 
     @media (max-width: 768px) {
       max-width: 80%;

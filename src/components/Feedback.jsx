@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./styled/Button.styled";
 import StyledFeedback from "./styled/Feedback.styled";
 import Question from "./styled/Question.styled";
@@ -6,12 +6,12 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Popup from "./styled/Popup.styled";
 import Polygon from "./Polygon";
-import { preventScroll } from "../../utils";
+import { preventScroll, resumeScroll } from "../../utils";
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-  const form = useRef('');
+  const form = useRef("");
   let questionsText = [];
   for (let index = 0; index < 4; index++) {
     questionsText.push(`Вопрос${index + 1}`);
@@ -19,6 +19,20 @@ const Feedback = () => {
   let questionElements = questionsText.map((obj, index) => {
     return <Question obj={obj} key={index} />;
   });
+
+  useEffect(() => {
+    if (showPopup) {
+      preventScroll();
+    }
+
+    if (!showPopup) {
+      resumeScroll();
+    }
+
+    return () => {
+      resumeScroll();
+    };
+  }, [showPopup]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -28,7 +42,6 @@ const Feedback = () => {
 
     if (regexp.test(form.elements.phone.value)) {
       setShowPopup(true);
-      preventScroll();
     } else {
       setCorrect(false);
     }
@@ -36,14 +49,23 @@ const Feedback = () => {
 
   return (
     <StyledFeedback correct={correct}>
-      {showPopup && <Popup form={form} closePopup={() => setShowPopup(false)} />}
+      <Polygon number={1} />
+      <Polygon number={2} />
+      <Polygon number={4} />
+      {showPopup && (
+        <Popup form={form} closePopup={() => setShowPopup(false)} />
+      )}
       <div className="form-container">
         <h2>Позвоним в удобное время</h2>
         <p>
           Заполните форму обратной связи и уточните время, когда удобно
           поговорить.
         </p>
-        <form ref={form} className="feedback-form" onSubmit={(e) => handleSubmit(e)}>
+        <form
+          ref={form}
+          className="feedback-form"
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <input
             onFocus={() => setCorrect(true)}
             className="form__phone"
@@ -70,7 +92,7 @@ const Feedback = () => {
           </div>
           <input
             className="form__comment"
-            name="comment"            
+            name="comment"
             placeholder="Комментарий"
             type="text"
           />
@@ -78,9 +100,6 @@ const Feedback = () => {
         </form>
       </div>
       <div className="questions-container">{questionElements}</div>
-      <Polygon number={1} />
-      <Polygon number={2} />
-      <Polygon number={4} />
     </StyledFeedback>
   );
 };

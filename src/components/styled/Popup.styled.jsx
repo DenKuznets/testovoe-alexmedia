@@ -6,13 +6,13 @@ import { useRef } from "react";
 import { resumeScroll } from "../../../utils";
 
 const StyledPopup = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.6);
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,8 +65,7 @@ const Popup = (props) => {
   const input = useRef('');
   function closePopup(e) {
     if (e.target.classList.contains("popup")) {
-      props.closePopup();   
-      resumeScroll();
+      props.closePopup();  
     }
   }
 

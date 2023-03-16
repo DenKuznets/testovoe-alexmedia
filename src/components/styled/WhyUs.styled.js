@@ -6,7 +6,7 @@ const StyledWhyUs = styled.div`
   background: linear-gradient(106.35deg, #f6fffd 0%, #ffffff 100%);
   margin-top: 70px;
   position: relative;
-  z-index: -2;
+  z-index: 3;
   border-radius: 30px;
   @media (max-width: 1024px) {
   }
@@ -26,6 +26,7 @@ const StyledWhyUs = styled.div`
   }
 
   .cards-container {
+    position: relative;
     width: 100%;
     margin-top: 40px;
     display: grid;

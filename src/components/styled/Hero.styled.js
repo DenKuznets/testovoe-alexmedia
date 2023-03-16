@@ -19,6 +19,7 @@ const HeroStyled = styled.div`
 
   .hero__hero-image {
     max-width: 65%;
+    position: relative;
   }
 
   .hero__btn {
@@ -30,11 +31,11 @@ const HeroStyled = styled.div`
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 
     @media (max-width: 768px) {
       position: relative;
       text-align: center;
-      /* justify-content: center; */
       align-items: center;
     }
 

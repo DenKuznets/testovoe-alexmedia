@@ -13,7 +13,6 @@ const StyledFeedback = styled.div`
     rgba(194, 219, 255, 0) 100%
   );
   min-height: 507px;
-  z-index: -2;
   border-radius: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -21,6 +20,7 @@ const StyledFeedback = styled.div`
     align-items: center;
   }
   .form-container {
+    position: relative;
     align-items: center;
     flex: 1;
     display: flex;
@@ -65,7 +65,6 @@ const StyledFeedback = styled.div`
     display: ${(props) => (props.correct ? "none" : "flex")};
     margin-top: 5px;
     color: red;
-    /* display: flex; */
     align-items: center;
     p {
       margin: 0;
@@ -83,6 +82,7 @@ const StyledFeedback = styled.div`
     flex-direction: column;
     flex: 1;
     width: 100%;
+    position: relative;
   }
 
   .polygon1 {

@@ -18,7 +18,7 @@ export const DesktopNavbar = styled.nav`
   a {
     text-decoration: none;
     color: #03032c;
-    
+
     &:hover {
       font-weight: 700;
       color: #5d5fef;
@@ -30,9 +30,9 @@ export const MobileNavbar = styled.nav`
   min-height: 100vh;
   width: 100vw;
   background-color: rgba(20, 22, 64, 0.95);
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  top: -10px;
+  top: 0;
   left: 0;
   color: white;
   display: flex;
@@ -49,6 +49,10 @@ export const MobileNavbar = styled.nav`
   a {
     color: white;
     text-decoration: none;
+    &:hover {
+      font-weight: 700;
+      color: #5d5fef;
+    }
   }
   .close-btn {
     position: absolute;
