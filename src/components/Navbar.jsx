@@ -6,19 +6,29 @@ const Navbar = (props) => {
   const items = (
     <ul>
       <li>
-        <a href="#">Главная</a>
+        <a onClick={props.handleLinkClick} href="#">
+          Главная
+        </a>
       </li>
       <li>
-        <a href="#why-us">Разработка</a>
+        <a onClick={props.handleLinkClick} href="#why-us">
+          Разработка
+        </a>
       </li>
       <li>
-        <a href="#easy-work">Продвижение</a>
+        <a onClick={props.handleLinkClick} href="#easy-work">
+          Продвижение
+        </a>
       </li>
       <li>
-        <a href="#prices">Портфолио</a>
+        <a onClick={props.handleLinkClick} href="#prices">
+          Портфолио
+        </a>
       </li>
       <li>
-        <a href="#contact-us">Контакты</a>
+        <a onClick={props.handleLinkClick} href="#contact-us">
+          Контакты
+        </a>
       </li>
     </ul>
   );

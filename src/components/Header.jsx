@@ -30,7 +30,6 @@ const Header = () => {
 
   function handleBurgerClick() {
     setMobile(true);
-    // prevent page background scrolling
     preventScroll();
   }
 
@@ -42,7 +41,11 @@ const Header = () => {
   return (
     <StyledHeader fullWidth={headerFullWidth} ref={header}>
       <Logo />
-      <Navbar mobile={mobile} onCloseBtnClick={handleCloseBtnClick} />
+      <Navbar
+        handleLinkClick={handleCloseBtnClick}
+        mobile={mobile}
+        onCloseBtnClick={handleCloseBtnClick}
+      />
       <div className="contacts">8 (800) 000 00-00</div>
       <div className="burger" onClick={handleBurgerClick}>
         <IconContext.Provider
