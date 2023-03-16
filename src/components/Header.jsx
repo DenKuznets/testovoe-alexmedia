@@ -11,22 +11,24 @@ const Header = () => {
   // ширина заголовка
   const [headerFullWidth, setHeaderFullWidth] = useState(false);
   const [mobile, setMobile] = useState(false);
-
   useEffect(() => {
     const onScroll = () => {
+      console.log('scroll');
       if (header) {
-        if (header.current.getBoundingClientRect().top === 0) {
+        if (header.current.getBoundingClientRect().top <= 0) {
           setHeaderFullWidth(true);
         } else {
           setHeaderFullWidth(false);
         }
       }
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
     
+    window.addEventListener("scroll", onScroll, { passive: true });
     // clean up code
     return () => window.removeEventListener("scroll", onScroll);
   }, []); 
+
+
 
   function handleBurgerClick() {
     setMobile(true);

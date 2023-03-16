@@ -17,7 +17,6 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 999;
-  /* outline: 1px solid red; */
   @media (max-width: 1024px) {
     justify-content: start;
   }  
