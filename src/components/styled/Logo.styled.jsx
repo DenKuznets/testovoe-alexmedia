@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledLogo = styled.div`
   display: flex;
   align-items: center;
+
   @media (max-width: 1024px) {
     margin-right: auto;
   }
@@ -22,6 +23,9 @@ const StyledLogo = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 `;
 

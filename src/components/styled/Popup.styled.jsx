@@ -26,6 +26,9 @@ const StyledPopup = styled.div`
     align-items: center;
     padding: 50px 30px;
     border-radius: 30px;
+    @media (max-width: 480px) {
+      width: 90%;
+    }
     h3,
     h4,
     button,
@@ -56,7 +59,7 @@ const StyledPopup = styled.div`
   .close-btn {
     position: absolute;
     top: 5%;
-    left: 90%;
+    left: 85%;
     cursor: pointer;
   }
 `;

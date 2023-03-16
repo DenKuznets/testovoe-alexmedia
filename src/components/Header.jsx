@@ -13,7 +13,6 @@ const Header = () => {
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
     const onScroll = () => {
-      console.log('scroll');
       if (header) {
         if (header.current.getBoundingClientRect().top <= 0) {
           setHeaderFullWidth(true);

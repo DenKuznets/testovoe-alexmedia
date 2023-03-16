@@ -19,12 +19,15 @@ const StyledHeader = styled.header`
   z-index: 999;
   @media (max-width: 1024px) {
     justify-content: start;
-  }  
+  }
 
   .contacts {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 
   .burger {
@@ -33,6 +36,9 @@ const StyledHeader = styled.header`
     @media (max-width: 1024px) {
       display: block;
       margin-left: 40px;
+    }
+    @media (max-width: 480px) {
+      margin-left: 5px;
     }
   }
 `;

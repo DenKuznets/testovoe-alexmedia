@@ -83,11 +83,14 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
-  
 }
 
-#prices, #partners {
+.App {
+  overflow-x: hidden;
+}
+
+#prices,
+#partners {
   box-shadow: none;
   border-radius: 0;
 }

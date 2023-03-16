@@ -9,7 +9,6 @@ const HeroStyled = styled.div`
   display: flex;
   position: relative;
   justify-content: flex-end;
-  z-index: -2;
   border-radius: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
