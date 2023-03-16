@@ -19,4 +19,13 @@ export function isVisible(elem) {
      return true;
   }
   return false;
- }
+}
+ 
+export const screen = {
+  screen1400: "1400px",
+  screen1200: "1200px",
+  screen992: "992px",
+  screen768: "768px",
+  screen576: "576px",
+  screen480: "480px"
+}

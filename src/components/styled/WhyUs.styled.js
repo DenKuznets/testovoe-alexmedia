@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const StyledWhyUs = styled.div`
   min-height: 522px;
@@ -8,9 +9,8 @@ const StyledWhyUs = styled.div`
   position: relative;
   z-index: 3;
   border-radius: 30px;
-  @media (max-width: 1024px) {
-  }
-  @media (max-width: 768px) {
+
+  @media (max-width: ${screen.screen768}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@ const StyledWhyUs = styled.div`
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 94px;
     grid-row-gap: 30px;
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -49,7 +49,7 @@ const StyledWhyUs = styled.div`
 
     img {
       margin-top: 10px;
-      @media (max-width: 480px) {
+      @media (max-width: ${screen.screen480}) {
         width: 45px;
       }
     }

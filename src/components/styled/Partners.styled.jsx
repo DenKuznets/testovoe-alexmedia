@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const StyledPartners = styled.div`
   text-align: center;
@@ -8,13 +9,13 @@ const StyledPartners = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-top: 40px;
-    @media (max-width: 480px) {
+    @media (max-width: ${screen.screen480}) {
       flex-direction: column;
       align-items: center;
     }
     img {
       max-width: 25%;
-      @media (max-width: 480px) {
+      @media (max-width: ${screen.screen480}) {
         max-width: 100%;
       }
     }

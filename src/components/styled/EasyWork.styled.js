@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const EasyWorkStyled = styled.div`
   margin-top: 70px;
@@ -10,7 +11,7 @@ const EasyWorkStyled = styled.div`
   justify-content: space-between;
   z-index: -2;
   border-radius: 30px;
-  @media (max-width: 768px) {
+  @media (max-width: ${screen.screen768}) {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
@@ -27,7 +28,7 @@ const EasyWorkStyled = styled.div`
     max-width: 40%;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       max-width: 80%;
       position: relative;
       text-align: center;
@@ -36,7 +37,7 @@ const EasyWorkStyled = styled.div`
 
     h2 {
       margin-top: 126px;
-      @media (max-width: 768px) {
+      @media (max-width: ${screen.screen768}) {
         margin-top: 40px;
       }
     }

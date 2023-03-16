@@ -7,7 +7,7 @@ import Logo from "./styled/Logo.styled";
 import { preventScroll, resumeScroll } from "../../utils";
 
 const Header = () => {
-  const header = useRef("");
+  const header = useRef();
   // ширина заголовка
   const [headerFullWidth, setHeaderFullWidth] = useState(false);
   const [mobile, setMobile] = useState(false);
@@ -32,6 +32,8 @@ const Header = () => {
   function handleBurgerClick() {
     setMobile(true);
     preventScroll();
+    // header.current.querySelector("nav").classList.add("animate__animated");
+    // header.current.querySelector("nav").classList.add("animate__fadeIn");
   }
 
   function handleCloseBtnClick() {

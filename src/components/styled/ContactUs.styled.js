@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const StyledContactUs = styled.div`
   margin-top: 70px;
@@ -13,7 +14,7 @@ const StyledContactUs = styled.div`
     #fffdfa 100%,
     #fffdfa 100%
   );
-  @media (max-width: 768px) {
+  @media (max-width: ${screen.screen768}) {
     flex-direction: column;
     padding: 0 15px;
   }
@@ -22,7 +23,7 @@ const StyledContactUs = styled.div`
     padding: 50px 15px;
     flex: 1;
     max-width: 50%;
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       max-width: 100%;
       display: flex;
       flex-direction: column;
@@ -63,11 +64,10 @@ const StyledContactUs = styled.div`
     top: 50%;
     left: 49%;
     transform: translateY(-50%);
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       flex: unset;
       position: static;
       width: 80%;
-      /* margin: auto; */
       margin: 20px auto;
       height: 350px;
       transform: none;

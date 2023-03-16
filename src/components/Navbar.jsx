@@ -1,4 +1,4 @@
-import { DesktopNavbar, MobileNavbar } from "./styled/Navbar.styled";
+import { StyledNavbar } from "./styled/Navbar.styled";
 import { TfiClose } from "react-icons/tfi";
 import { IconContext } from "react-icons";
 
@@ -32,8 +32,8 @@ const Navbar = (props) => {
       </li>
     </ul>
   );
-  return props.mobile ? (
-    <MobileNavbar>
+  return (
+    <StyledNavbar mobile={props.mobile}>
       <IconContext.Provider
         value={{
           size: "2em",
@@ -41,14 +41,12 @@ const Navbar = (props) => {
           className: "close-btn",
         }}
       >
-        <div>
+        <div className="nav__close-btn">
           <TfiClose onClick={props.onCloseBtnClick} />
         </div>
-        {items}
       </IconContext.Provider>
-    </MobileNavbar>
-  ) : (
-    <DesktopNavbar>{items}</DesktopNavbar>
+      {items}
+    </StyledNavbar>
   );
 };
 

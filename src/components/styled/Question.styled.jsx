@@ -12,7 +12,6 @@ const StyledQuestion = styled.div`
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
-  /* max-width: 570px; */
   h4 {
     justify-content: space-between;
     display: flex;
@@ -23,10 +22,7 @@ const StyledQuestion = styled.div`
   }
   p {
     overflow: hidden;
-    /* display: ${(props) => (props.open ? "block" : "none")}; */
-    /* opacity: ${(props) => (props.open ? "1" : "0")}; */
     max-height: ${(props) => (props.open ? "100px" : "0")};
-    /* padding-bottom: 15px; */
     transition: all 0.3s;
   }
 `;

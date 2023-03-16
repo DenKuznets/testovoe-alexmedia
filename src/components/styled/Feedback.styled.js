@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const StyledFeedback = styled.div`
   position: relative;
@@ -14,7 +15,7 @@ const StyledFeedback = styled.div`
   );
   min-height: 507px;
   border-radius: 30px;
-  @media (max-width: 768px) {
+  @media (max-width: ${screen.screen768}) {
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const HeroStyled = styled.div`
   background: linear-gradient(106deg, #e3ffec 0%, #effff3 100%);
@@ -10,7 +11,7 @@ const HeroStyled = styled.div`
   position: relative;
   justify-content: flex-end;
   border-radius: 30px;
-  @media (max-width: 768px) {
+  @media (max-width: ${screen.screen768}) {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px;
@@ -32,7 +33,7 @@ const HeroStyled = styled.div`
     flex-direction: column;
     z-index: 1;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       position: relative;
       text-align: center;
       align-items: center;
@@ -40,7 +41,7 @@ const HeroStyled = styled.div`
 
     h1 {
       margin-top: 126px;
-      @media (max-width: 768px) {
+      @media (max-width: ${screen.screen768}) {
         margin-top: 20px;
       }
     }

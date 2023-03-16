@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -17,7 +18,7 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 999;
-  @media (max-width: 1024px) {
+  @media (max-width: ${screen.screen992}) {
     justify-content: start;
   }
 
@@ -25,7 +26,7 @@ const StyledHeader = styled.header`
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       font-size: 10px;
     }
   }
@@ -33,11 +34,11 @@ const StyledHeader = styled.header`
   .burger {
     display: none;
     cursor: pointer;
-    @media (max-width: 1024px) {
+    @media (max-width: ${screen.screen992}) {
       display: block;
       margin-left: 40px;
     }
-    @media (max-width: 480px) {
+    @media (max-width: ${screen.screen480}) {
       margin-left: 5px;
     }
   }

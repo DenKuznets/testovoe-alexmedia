@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { screen } from "../../../utils";
 
 const StyledLogo = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${screen.screen992}) {
     margin-right: auto;
   }
   .logo__name {
@@ -23,7 +24,7 @@ const StyledLogo = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    @media (max-width: 768px) {
+    @media (max-width: ${screen.screen768}) {
       font-size: 10px;
     }
   }

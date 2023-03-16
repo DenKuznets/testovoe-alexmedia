@@ -3,7 +3,7 @@ import Button from "./Button.styled";
 import { AiOutlineClose } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { useRef } from "react";
-import { resumeScroll } from "../../../utils";
+import { screen } from "../../../utils";
 
 const StyledPopup = styled.div`
   position: fixed;
@@ -26,7 +26,7 @@ const StyledPopup = styled.div`
     align-items: center;
     padding: 50px 30px;
     border-radius: 30px;
-    @media (max-width: 480px) {
+    @media (max-width: ${screen.screen480}) {
       width: 90%;
     }
     h3,
@@ -37,12 +37,12 @@ const StyledPopup = styled.div`
       margin-bottom: 20px;
     }
     h3 {
-      @media (max-width: 1024px) {
+      @media (max-width: ${screen.screen992}) {
         font-size: 1.2em;
       }
     }
     h4 {
-      @media (max-width: 1024px) {
+      @media (max-width: ${screen.screen992}) {
         font-size: 1em;
       }
     }
