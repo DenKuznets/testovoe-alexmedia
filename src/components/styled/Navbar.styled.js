@@ -17,6 +17,7 @@ export const StyledNavbar = styled.nav`
     align-items: center;
     justify-content: center;
     transition: all 0.4s;
+    overflow: hidden;
   }
   ul {
     display: flex;
