@@ -4,6 +4,7 @@ import { IconContext } from "react-icons";
 import { useRef, useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Logo from "./styled/Logo.styled";
+import { preventScroll, resumeScroll } from "../../utils";
 
 const Header = () => {
   const header = useRef("");
@@ -30,17 +31,12 @@ const Header = () => {
   function handleBurgerClick() {
     setMobile(true);
     // prevent page background scrolling
-    if (typeof window != "undefined" && window.document) {
-      document.body.style.overflow = "hidden";
-    }
+    preventScroll();
   }
 
   function handleCloseBtnClick() {
     setMobile(false);
-    // resume page scrolling
-    if (typeof window != "undefined" && window.document) {
-      document.body.style.overflow = "";
-    }
+    resumeScroll();
   }
 
   return (

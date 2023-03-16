@@ -13,6 +13,8 @@ const StyledFeedback = styled.div`
     rgba(194, 219, 255, 0) 100%
   );
   min-height: 507px;
+  z-index: -2;
+  border-radius: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -25,12 +27,10 @@ const StyledFeedback = styled.div`
     flex-direction: column;
     width: 100%;
     h2 {
-      z-index: 2;
     }
     p {
       margin-top: 40px;
       max-width: 470px;
-      z-index: 2;
     }
     form {
       display: flex;
@@ -91,13 +91,11 @@ const StyledFeedback = styled.div`
   }
   .polygon2 {
     top: -10%;
-    z-index: -1;
     left: 90%;
   }
   .polygon4 {
     top: 25%;
-    z-index: 1;
-    left: -5%;   
+    left: -5%;
   }
 `;
 export default StyledFeedback;

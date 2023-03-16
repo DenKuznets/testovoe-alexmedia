@@ -3,6 +3,7 @@ import Button from "./Button.styled";
 import { AiOutlineClose } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { useRef } from "react";
+import { resumeScroll } from "../../../utils";
 
 const StyledPopup = styled.div`
   position: absolute;
@@ -64,13 +65,14 @@ const Popup = (props) => {
   const input = useRef('');
   function closePopup(e) {
     if (e.target.classList.contains("popup")) {
-      props.closePopup();      
+      props.closePopup();   
+      resumeScroll();
     }
   }
 
   function checkAnser() {
     if (input.current.value === '4') {
-      console.log(props.form.current.submit());
+      props.form.current.submit();
     }
   }
   

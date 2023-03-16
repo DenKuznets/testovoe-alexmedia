@@ -6,8 +6,9 @@ const StyledWhyUs = styled.div`
   background: linear-gradient(106.35deg, #f6fffd 0%, #ffffff 100%);
   margin-top: 70px;
   position: relative;
+  z-index: -2;
+  border-radius: 30px;
   @media (max-width: 1024px) {
-
   }
   @media (max-width: 768px) {
     display: flex;
@@ -51,8 +52,6 @@ const StyledWhyUs = styled.div`
         width: 45px;
       }
     }
-
-    
   }
 `;
 

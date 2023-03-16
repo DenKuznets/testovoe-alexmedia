@@ -6,6 +6,7 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Popup from "./styled/Popup.styled";
 import Polygon from "./Polygon";
+import { preventScroll } from "../../utils";
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
@@ -26,7 +27,8 @@ const Feedback = () => {
       /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
     if (regexp.test(form.elements.phone.value)) {
-      setShowPopup(true);      
+      setShowPopup(true);
+      preventScroll();
     } else {
       setCorrect(false);
     }
@@ -48,7 +50,7 @@ const Feedback = () => {
             name="phone"
             required
             placeholder="Телефон"
-            type="number"
+            type="tel"
           />
           <div className="incorrect-phone">
             <span>

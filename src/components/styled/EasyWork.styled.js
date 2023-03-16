@@ -8,6 +8,8 @@ const EasyWorkStyled = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
+  z-index: -2;
+  border-radius: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -22,7 +24,7 @@ const EasyWorkStyled = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 40%;
-    
+
     @media (max-width: 768px) {
       max-width: 80%;
       position: relative;
@@ -31,13 +33,13 @@ const EasyWorkStyled = styled.div`
     }
 
     h2 {
-      margin-top: 126px;      
+      margin-top: 126px;
       @media (max-width: 768px) {
         margin-top: 40px;
       }
     }
 
-    p{
+    p {
       margin-top: 40px;
     }
 
@@ -57,15 +59,15 @@ const EasyWorkStyled = styled.div`
     }
   }
 
-  .polygon1{
+  .polygon1 {
     top: -5%;
     left: 40%;
   }
 
-  .polygon5{
+  .polygon5 {
     top: 90%;
     left: -5%;
-  }  
+  }
 `;
 
 export default EasyWorkStyled;

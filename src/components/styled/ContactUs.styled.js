@@ -5,6 +5,8 @@ const StyledContactUs = styled.div`
   display: flex;
   position: relative;
   min-height: 300px;
+
+  border-radius: 30px;
   background: linear-gradient(
     106.35deg,
     #fffcf2 0%,
