@@ -9,8 +9,9 @@ const StyledPrices = styled.div`
     display: flex;
     margin-top: 40px;
     gap: 30px;
-    @media (max-width: 768px) {
+    @media (max-width: 860px) {
       flex-direction: column;
+      align-items: center;
       width: 80%;
     }
   }
@@ -21,12 +22,14 @@ const StyledPrices = styled.div`
     align-items: center;
     padding: 50px 22px;
     border-radius: 30px;
-    height: 655px;
+    min-height: 655px;
     max-width: 380px;
     box-shadow: 5px 5px 20px rgba(30, 83, 210, 0.1);
-    @media (max-width: 768px) {
-      height: auto;
+    @media (max-width: 860px) {
+      min-height: auto;
+      max-width: 90%;
     }
+    
 
     ul {
       text-align: start;
@@ -34,7 +37,7 @@ const StyledPrices = styled.div`
       margin-bottom: auto;
       padding-left: 20px;
       list-style-image: url(./images/list-dot-small.png);
-      @media (max-width: 768px) {
+      @media (max-width: 860px) {
         margin-bottom: 20px;
       }
       li {
