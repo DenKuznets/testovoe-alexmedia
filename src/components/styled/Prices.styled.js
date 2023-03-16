@@ -22,6 +22,7 @@ const StyledPrices = styled.div`
     padding: 50px 22px;
     border-radius: 30px;
     height: 655px;
+    max-width: 380px;
     box-shadow: 5px 5px 20px rgba(30, 83, 210, 0.1);
     @media (max-width: 768px) {
       height: auto;

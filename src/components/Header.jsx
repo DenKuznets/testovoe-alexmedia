@@ -22,9 +22,9 @@ const Header = () => {
         }
       }
     };
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
+    
+    // clean up code
     return () => window.removeEventListener("scroll", onScroll);
   }, []); 
 
