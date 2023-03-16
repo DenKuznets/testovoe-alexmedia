@@ -14,6 +14,9 @@ const StyledWhyUs = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    p{
+      margin-top: 10px;
+    }
   }
 
   .polygon2 {

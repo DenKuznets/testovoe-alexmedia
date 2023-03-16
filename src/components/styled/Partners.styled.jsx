@@ -12,6 +12,7 @@ const StyledPartners = styled.div`
     @media (max-width: ${screen.screen480}) {
       flex-direction: column;
       align-items: center;
+      padding: 0 10px;
     }
     img {
       max-width: 25%;

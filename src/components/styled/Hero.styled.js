@@ -40,9 +40,14 @@ const HeroStyled = styled.div`
     }
 
     h1 {
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 73px;
       margin-top: 126px;
       @media (max-width: ${screen.screen768}) {
-        margin-top: 20px;
+        margin-top: 50px;
+        font-size: 32px;
+        line-height: 45px;
       }
     }
 
@@ -51,6 +56,10 @@ const HeroStyled = styled.div`
       margin-top: 25px;
       padding-left: 20px;
       list-style-image: url(./images/list-dot.svg);
+      @media (max-width: ${screen.screen768}) {
+        list-style-image: url(./images/list-dot-small.png);
+
+      }
       li {
         font-weight: 400;
         font-size: 16px;

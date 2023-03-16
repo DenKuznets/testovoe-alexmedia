@@ -44,6 +44,9 @@ const EasyWorkStyled = styled.div`
 
     p {
       margin-top: 40px;
+      @media (max-width: ${screen.screen768}) {
+        margin-top: 20px;
+      }
     }
 
     ul {
