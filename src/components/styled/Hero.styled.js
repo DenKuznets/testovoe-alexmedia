@@ -9,6 +9,8 @@ const HeroStyled = styled.div`
   display: flex;
   position: relative;
   justify-content: flex-end;
+  z-index: -2;
+  border-radius: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -27,7 +29,7 @@ const HeroStyled = styled.div`
     left: 10px;
     position: absolute;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 
     @media (max-width: 768px) {
       position: relative;
@@ -38,9 +40,9 @@ const HeroStyled = styled.div`
 
     h1 {
       margin-top: 126px;
-       @media (max-width: 768px) {
+      @media (max-width: 768px) {
         margin-top: 20px;
-       }
+      }
     }
 
     ul {
