@@ -86,7 +86,7 @@ body {
 }
 
 .App {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #prices,
