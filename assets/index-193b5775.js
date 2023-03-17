@@ -162,6 +162,9 @@ Error generating stack: `+i.message+`
 
     p {
       margin-top: 40px;
+      @media (max-width: ${K.screen768}) {
+        margin-top: 20px;
+      }
     }
 
     ul {
@@ -359,16 +362,6 @@ Error generating stack: `+i.message+`
       width: 100%;
       margin-bottom: 20px;
     }
-    h3 {
-      @media (max-width: ${K.screen992}) {
-        font-size: 1.2em;
-      }
-    }
-    h4 {
-      @media (max-width: ${K.screen992}) {
-        font-size: 1em;
-      }
-    }
 
     input {
       background-color: rgb(222, 226, 242);
@@ -508,7 +501,7 @@ Error generating stack: `+i.message+`
       font-size: 10px;
     }
   }
-`,Gf=()=>U(Um,{className:"logo",children:[U("div",{className:"logo__name",children:["Alex ",v("br",{})," Media"]}),v("div",{className:"logo__devider"}),U("div",{className:"logo__text",children:["Веб-студия ",v("br",{})," Создание сайтов под ключ"]})]}),Bm=()=>{const e=le.useRef(),[t,n]=le.useState(!1),[r,l]=le.useState(!1);le.useEffect(()=>{const u=()=>{e&&(e.current.getBoundingClientRect().top<=0?n(!0):n(!1))};return window.addEventListener("scroll",u,{passive:!0}),()=>window.removeEventListener("scroll",u)},[]);function i(){l(!0),Vf()}function o(){l(!1),tu()}return U(Im,{fullWidth:t,ref:e,children:[v(Gf,{}),v(Fm,{handleLinkClick:o,mobile:r,onCloseBtnClick:o}),v("div",{className:"contacts",children:"8 (800) 000 00-00"}),v("div",{className:"burger",onClick:i,children:v(Qn.Provider,{value:{size:"2em",color:"rgb(93,96,239)"},children:v("div",{children:v(Mm,{})})})})]})},Hm=je.div`
+`,Gf=()=>U(Um,{className:"logo",children:[U("div",{className:"logo__name",children:["Alex ",v("br",{})," Media"]}),v("div",{className:"logo__devider"}),U("div",{className:"logo__text",children:["Веб-студия ",v("br",{})," Создание сайтов под ключ"]})]}),Bm=()=>{const e=le.useRef(),[t,n]=le.useState(!1),[r,l]=le.useState(!1);le.useEffect(()=>{const u=()=>{e&&(e.current.getBoundingClientRect().top<=0?n(!0):n(!1))},s=()=>{r&&window.innerWidth>992&&l(!1)};return window.addEventListener("scroll",u,{passive:!0}),window.addEventListener("resize",s,{passive:!0}),()=>{window.removeEventListener("resize",s),window.removeEventListener("scroll",u)}},[]);function i(){l(!0),Vf()}function o(){l(!1),tu()}return U(Im,{fullWidth:t,ref:e,children:[v(Gf,{}),v(Fm,{handleLinkClick:o,mobile:r,onCloseBtnClick:o}),v("div",{className:"contacts",children:"8 (800) 000 00-00"}),v("div",{className:"burger",onClick:i,children:v(Qn.Provider,{value:{size:"2em",color:"rgb(93,96,239)"},children:v("div",{children:v(Mm,{})})})})]})},Hm=je.div`
   background: linear-gradient(106deg, #e3ffec 0%, #effff3 100%);
   margin-top: 30px;
   min-height: 650px;
@@ -549,7 +542,7 @@ Error generating stack: `+i.message+`
     h1 {
       margin-top: 126px;
       @media (max-width: ${K.screen768}) {
-        margin-top: 20px;
+        margin-top: 50px;
       }
     }
 
@@ -558,6 +551,10 @@ Error generating stack: `+i.message+`
       margin-top: 25px;
       padding-left: 20px;
       list-style-image: url(./images/list-dot.svg);
+      @media (max-width: ${K.screen768}) {
+        list-style-image: url(./images/list-dot-small.png);
+
+      }
       li {
         font-weight: 400;
         font-size: 16px;
@@ -595,7 +592,6 @@ Error generating stack: `+i.message+`
     @media (max-width: ${K.screen992}) {
       flex-direction: column;
       align-items: center;
-      width: 80%;
     }
   }
 
@@ -663,9 +659,15 @@ align-items: center;
 padding: 0 10px;
 margin-top: 100px;
 margin-bottom: 20px;
+.copyright{
+  font-size: 10px;
+  text-align: end;
+  padding-right: 5px;
+}
 `,Xm=()=>U(Km,{children:[v(Gf,{}),U("div",{className:"copyright",children:["© ",new Date().getFullYear(),", Все права защищены"]})]}),Zm=je.div`
   text-align: center;
   margin-top: 40px;
+  padding: 0 10px;
   .images {
     display: flex;
     justify-content: space-between;
@@ -701,6 +703,10 @@ margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+    p{
+      margin-top: 10px;
+    }
   }
 
   .polygon2 {
