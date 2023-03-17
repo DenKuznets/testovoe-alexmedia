@@ -40,14 +40,9 @@ const HeroStyled = styled.div`
     }
 
     h1 {
-      font-weight: 900;
-      font-size: 60px;
-      line-height: 73px;
       margin-top: 126px;
       @media (max-width: ${screen.screen768}) {
         margin-top: 50px;
-        font-size: 32px;
-        line-height: 45px;
       }
     }
 

@@ -36,16 +36,6 @@ const StyledPopup = styled.div`
       width: 100%;
       margin-bottom: 20px;
     }
-    h3 {
-      @media (max-width: ${screen.screen992}) {
-        font-size: 1.2em;
-      }
-    }
-    h4 {
-      @media (max-width: ${screen.screen992}) {
-        font-size: 1em;
-      }
-    }
 
     input {
       background-color: rgb(222, 226, 242);
