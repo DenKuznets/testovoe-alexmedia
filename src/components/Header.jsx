@@ -8,7 +8,7 @@ import { preventScroll, resumeScroll } from "../../utils";
 
 const Header = () => {
   const header = useRef();
-  // ширина заголовка
+  // header width
   const [headerFullWidth, setHeaderFullWidth] = useState(false);
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
@@ -21,10 +21,23 @@ const Header = () => {
         }
       }
     };
+
+    const onResize = () => {
+      // закрыть мобильное меню при изменении экрана
+      if (mobile && window.innerWidth > 992) {
+        setMobile(false);
+      }
+    }
+
     
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
     // clean up code
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onScroll);
+    }
   }, []); 
 
 
@@ -32,8 +45,6 @@ const Header = () => {
   function handleBurgerClick() {
     setMobile(true);
     preventScroll();
-    // header.current.querySelector("nav").classList.add("animate__animated");
-    // header.current.querySelector("nav").classList.add("animate__fadeIn");
   }
 
   function handleCloseBtnClick() {

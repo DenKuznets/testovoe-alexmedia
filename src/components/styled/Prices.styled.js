@@ -13,7 +13,6 @@ const StyledPrices = styled.div`
     @media (max-width: ${screen.screen992}) {
       flex-direction: column;
       align-items: center;
-      width: 80%;
     }
   }
 

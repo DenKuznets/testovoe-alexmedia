@@ -8,7 +8,12 @@ align-items: center;
 padding: 0 10px;
 margin-top: 100px;
 margin-bottom: 20px;
-`
+.copyright{
+  font-size: 10px;
+  text-align: end;
+  padding-right: 5px;
+}
+`;
 
 const Footer = () => {
   return (

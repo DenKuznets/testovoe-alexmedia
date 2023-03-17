@@ -4,6 +4,7 @@ import { screen } from "../../../utils";
 const StyledPartners = styled.div`
   text-align: center;
   margin-top: 40px;
+  padding: 0 10px;
   .images {
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,6 @@ const StyledPartners = styled.div`
     @media (max-width: ${screen.screen480}) {
       flex-direction: column;
       align-items: center;
-      padding: 0 10px;
     }
     img {
       max-width: 25%;
