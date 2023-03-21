@@ -29,6 +29,13 @@ const StyledHeader = styled.header`
     @media (max-width: ${screen.screen768}) {
       font-size: 10px;
     }
+
+    a {
+      transition: all 0.4s;
+      &:hover {
+        color: rgb(239, 37, 85);
+      }
+    }
   }
 
   .burger {

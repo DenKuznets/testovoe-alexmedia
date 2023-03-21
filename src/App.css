@@ -123,6 +123,11 @@ p {
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: #03032c;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 48px;

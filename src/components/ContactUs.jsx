@@ -16,8 +16,12 @@ const ContactUs = () => {
           </div>
           <div className="text-right">
             <ul>
-              <li>+7 (910) 99-666-99</li>
-              <li>alex.media@bk.ru</li>
+              <li>
+                <a href="tel:+79109966699"> +7 (910) 99-666-99</a>
+              </li>
+              <li>
+                <a href="mailto:test@gmail.com">alex.media@bk.ru</a>
+              </li>
               <li>г.Иваново, Комсомольская, 17</li>
             </ul>
           </div>

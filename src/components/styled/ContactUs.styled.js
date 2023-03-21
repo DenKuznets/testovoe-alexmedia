@@ -41,6 +41,15 @@ const StyledContactUs = styled.div`
       li {
         font-size: 16px;
         line-height: 25px;
+        @media (max-width: ${screen.screen768}) {
+          margin-bottom: 10px;
+        }
+      }
+      a {
+        transition: all 0.4s;
+        &:hover {
+          color: rgb(239, 37, 85);
+        }
       }
     }
     .text-right {

@@ -11,6 +11,7 @@ const Header = () => {
   // header width
   const [headerFullWidth, setHeaderFullWidth] = useState(false);
   const [mobile, setMobile] = useState(false);
+  
   useEffect(() => {
     const onScroll = () => {
       if (header) {
@@ -25,22 +26,18 @@ const Header = () => {
     const onResize = () => {
       // закрыть мобильное меню при изменении экрана
       if (mobile && window.innerWidth > 992) {
-        setMobile(false);
+        handleCloseBtnClick();
       }
-    }
+    };
 
-    
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize, { passive: true });
     // clean up code
     return () => {
-      
       window.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScroll);
-    }
-  }, []); 
-
-
+    };
+  }, [mobile]);
 
   function handleBurgerClick() {
     setMobile(true);
@@ -60,7 +57,9 @@ const Header = () => {
         mobile={mobile}
         onCloseBtnClick={handleCloseBtnClick}
       />
-      <div className="contacts">8 (800) 000 00-00</div>
+      <div className="contacts">
+        <a href="tel:+88000000000">8 (800) 000 00-00</a>
+      </div>
       <div className="burger" onClick={handleBurgerClick}>
         <IconContext.Provider
           value={{
