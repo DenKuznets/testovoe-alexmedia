@@ -7,6 +7,7 @@ import { IconContext } from "react-icons";
 import Popup from "./styled/Popup.styled";
 import Polygon from "./Polygon";
 import { preventScroll, resumeScroll } from "../../utils";
+import { IMaskInput } from "react-imask";
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
@@ -61,11 +62,7 @@ const Feedback = () => {
           Заполните форму обратной связи и уточните время, когда удобно
           поговорить.
         </p>
-        <form
-          ref={form}
-          className="form"
-          onSubmit={(e) => handleSubmit(e)}
-        >
+        <form ref={form} className="form" onSubmit={(e) => handleSubmit(e)}>
           <input
             onFocus={() => setCorrect(true)}
             className="form__form-phone"
@@ -74,7 +71,8 @@ const Feedback = () => {
             placeholder="Телефон"
             type="tel"
           />
-          <div className="incorrect-phone">
+          
+          <div className="incorrect-phone-alert">
             <span>
               <IconContext.Provider
                 value={{

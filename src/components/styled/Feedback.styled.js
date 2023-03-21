@@ -66,7 +66,7 @@ const StyledFeedback = styled.div`
     border: 1px solid #505178;
   }
 
-  .incorrect-phone {
+  .incorrect-phone-alert {
     display: ${(props) => (props.correct ? "none" : "flex")};
     margin-top: 5px;
     color: red;
