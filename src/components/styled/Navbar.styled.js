@@ -48,6 +48,15 @@ export const StyledNavbar = styled.nav`
       font-weight: 700;
       color: #5d5fef;
     }
+
+    &::before {
+      display: block;
+      content: attr(data-text);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
   }
   .nav__close-btn {
     display: ${(props) => (props.mobile ? "block" : "none")};

@@ -89,6 +89,10 @@ body {
   overflow-x: clip;
 }
 
+main {
+  padding: 0 15px;
+}
+
 #prices,
 #partners {
   box-shadow: none;

@@ -20,6 +20,10 @@ const HeroStyled = styled.div`
   .hero__hero-image {
     max-width: 65%;
     position: relative;
+    @media (max-width: ${screen.screen768}) {
+      max-width: 95%;
+      margin-top: 30px;
+    }
   }
 
   .hero__btn {

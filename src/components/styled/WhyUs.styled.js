@@ -8,13 +8,13 @@ const StyledWhyUs = styled.div`
   margin-top: 70px;
   position: relative;
   z-index: 3;
-  border-radius: 30px;
+  border-radius: 30px;  
 
   @media (max-width: ${screen.screen768}) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    padding: 40px 20px;
     p{
       margin-top: 10px;
     }
