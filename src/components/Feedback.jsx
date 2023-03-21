@@ -7,12 +7,13 @@ import { IconContext } from "react-icons";
 import Popup from "./styled/Popup.styled";
 import Polygon from "./Polygon";
 import { preventScroll, resumeScroll } from "../../utils";
-import { IMaskInput } from "react-imask";
+import PhoneInput from "react-phone-number-input/input";
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-  const form = useRef("");
+  const formRef = useRef("");
+  const [value, setValue] = useState();
   let questionsText = [];
   for (let index = 0; index < 4; index++) {
     questionsText.push(`Вопрос${index + 1}`);
@@ -54,7 +55,7 @@ const Feedback = () => {
       <Polygon number={2} />
       <Polygon number={4} />
       {showPopup && (
-        <Popup form={form} closePopup={() => setShowPopup(false)} />
+        <Popup form={formRef} closePopup={() => setShowPopup(false)} />
       )}
       <div className="form-container">
         <h2>Позвоним в удобное время</h2>
@@ -62,16 +63,27 @@ const Feedback = () => {
           Заполните форму обратной связи и уточните время, когда удобно
           поговорить.
         </p>
-        <form ref={form} className="form" onSubmit={(e) => handleSubmit(e)}>
-          <input
+        <form ref={formRef} className="form" onSubmit={(e) => handleSubmit(e)}>
+          {/* <input
             onFocus={() => setCorrect(true)}
             className="form__form-phone"
             name="phone"
             required
             placeholder="Телефон"
             type="tel"
+          /> */}
+          <PhoneInput
+            onFocus={() => setCorrect(true)}
+            className="form__form-phone"
+            name="phone"
+            required
+            placeholder="Телефон"
+            type="tel"
+            country="RU"
+            value={value}
+            onChange={setValue}
           />
-          
+
           <div className="incorrect-phone-alert">
             <span>
               <IconContext.Provider

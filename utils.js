@@ -29,3 +29,4 @@ export const screen = {
   screen576: "576px",
   screen480: "480px",
 };
+

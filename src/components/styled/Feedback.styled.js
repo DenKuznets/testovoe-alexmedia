@@ -60,6 +60,7 @@ const StyledFeedback = styled.div`
   .form__form-phone {
     outline: ${(props) => (props.correct ? "" : "2px solid red")};
     border: ${(props) => (props.correct ? "1px solid #505178" : "none")};
+    
   }
 
   .form__form-comment {
