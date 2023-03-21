@@ -31,10 +31,10 @@ const Prices = () => {
   const cards = prices.map((obj, index) => {
     const listItems = obj.p.map((text, index) => <li key={index}>{text}</li>);
     return (
-      <div className={`card card${index}`} key={index}>
+      <div className={`card`} key={index}>
         <h3>{obj.header}</h3>
         <ul>{listItems}</ul>
-        <div className="price">{obj.price}</div>
+        <div className="card__card-price">{obj.price}</div>
         <Button width={200}>Выбрать</Button>
       </div>
     );

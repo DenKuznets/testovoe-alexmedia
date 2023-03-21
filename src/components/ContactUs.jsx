@@ -4,17 +4,17 @@ import StyledContactUs from "./styled/ContactUs.styled";
 const ContactUs = () => {
   return (
     <StyledContactUs>
-      <div className="text-container">
+      <div className="contacts-container">
         <h2>Свяжитесь с нами</h2>
         <div className="contacts">
-          <div className="text-left">
+          <div className="contacts__contacts-headers">
             <ul>
               <li>Телефон</li>
               <li>E-mail</li>
               <li>Адрес</li>
             </ul>
           </div>
-          <div className="text-right">
+          <div className="contacts__contacts-info">
             <ul>
               <li>
                 <a href="tel:+79109966699"> +7 (910) 99-666-99</a>

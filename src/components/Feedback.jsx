@@ -63,12 +63,12 @@ const Feedback = () => {
         </p>
         <form
           ref={form}
-          className="feedback-form"
+          className="form"
           onSubmit={(e) => handleSubmit(e)}
         >
           <input
             onFocus={() => setCorrect(true)}
-            className="form__phone"
+            className="form__form-phone"
             name="phone"
             required
             placeholder="Телефон"
@@ -91,7 +91,7 @@ const Feedback = () => {
             <p>Пожалуйста введите правильный номер телефона</p>
           </div>
           <input
-            className="form__comment"
+            className="form__form-comment"
             name="comment"
             placeholder="Комментарий"
             type="text"

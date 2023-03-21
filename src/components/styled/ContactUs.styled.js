@@ -19,7 +19,7 @@ const StyledContactUs = styled.div`
     padding: 0 15px;
   }
 
-  .text-container {
+  .contacts-container {
     padding: 50px 15px;
     flex: 1;
     max-width: 50%;
@@ -52,7 +52,7 @@ const StyledContactUs = styled.div`
         }
       }
     }
-    .text-right {
+    .contacts__contacts-info {
       font-weight: 700;
     }
   }

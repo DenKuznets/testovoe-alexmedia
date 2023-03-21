@@ -25,6 +25,21 @@ const StyledPrices = styled.div`
     min-height: 655px;
     max-width: 380px;
     box-shadow: 5px 5px 20px rgba(30, 83, 210, 0.1);
+    &:nth-child(1) {
+      background: linear-gradient(
+        161.52deg,
+        #f6f6ff 0%,
+        #f8f8ff 0%,
+        #edeeff 0.01%,
+        #fafaff 100%
+      );
+    }
+    &:nth-child(2) {
+      background: linear-gradient(161.52deg, #fffdf4 0%, #fffef9 100%);
+    }
+    &:nth-child(3) {
+      background: linear-gradient(161.52deg, #effff4 0%, #f8fffa 100%);
+    }
     @media (max-width: ${screen.screen992}) {
       min-height: auto;
       max-width: 90%;
@@ -48,7 +63,7 @@ const StyledPrices = styled.div`
         padding-left: 10px;
       }
     }
-    .price {
+    .card__card-price {
       font-weight: 900;
       font-size: 45px;
       line-height: 55px;

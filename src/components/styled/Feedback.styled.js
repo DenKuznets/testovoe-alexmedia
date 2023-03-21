@@ -43,7 +43,6 @@ const StyledFeedback = styled.div`
         margin-top: 30px;
         height: 60px;
         border-radius: 30px;
-        border: 1px solid #505178;
         padding: 0 20px;
         background: linear-gradient(
           106.35deg,
@@ -58,8 +57,13 @@ const StyledFeedback = styled.div`
     }
   }
 
-  .form__phone {
+  .form__form-phone {
     outline: ${(props) => (props.correct ? "" : "2px solid red")};
+    border: ${(props) => (props.correct ? "1px solid #505178" : "none")};
+  }
+
+  .form__form-comment {
+    border: 1px solid #505178;
   }
 
   .incorrect-phone {
