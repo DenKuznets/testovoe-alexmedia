@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        {/* <Section id="hero">
+        <Section id="hero">
           <Hero/>
         </Section>
         <Section id="why-us">
@@ -29,13 +29,13 @@ function App() {
         </Section>
         <Section id="prices">
           <Prices />
-        </Section> */}
+        </Section>
         <Section id="form">
           <Feedback/>
         </Section>
-        {/* <Section id="contact-us">
+        <Section id="contact-us">
           <ContactUs/>
-        </Section> */}
+        </Section>
       </main>
       <footer>
         <Section id="footer">
