@@ -78,7 +78,7 @@ const Feedback = () => {
       <Polygon number={2} />
       <Polygon number={4} />
       {showPopup && (
-        <Popup form={formRef} closePopup={() => setShowPopup(false)} />
+        <Popup form={form} closePopup={() => setShowPopup(false)} />
       )}
       <div className="form-container">
         <h2>Позвоним в удобное время</h2>
@@ -100,10 +100,10 @@ const Feedback = () => {
             onBlur={(e) => handleBlur(e)}
             onMouseUp={(e) => handleMouseUp(e)}
             onMouseEnter={() => setPlaceHolder("+7 (___) ___ __-__")}
-            onMouseLeave={()=>setPlaceHolder('Телефон')}
+            onMouseLeave={() => setPlaceHolder("Телефон")}
           />
 
-          <div className="incorrect-phone-alert">
+          <div className="incorrect-phone">
             <span>
               <IconContext.Provider
                 value={{
