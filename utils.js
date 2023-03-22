@@ -29,3 +29,24 @@ export const screen = {
   screen576: "576px",
   screen480: "480px",
 };
+
+export const maskPattern = [
+  "+",
+  "7",
+  " ",
+  "(",
+  /[1-9]/,
+  /\d/,
+  /\d/,
+  ")",
+  " ",
+  /\d/,
+  /\d/,
+  /\d/,
+  " ",
+  /\d/,
+  /\d/,
+  "-",
+  /\d/,
+  /\d/,
+];

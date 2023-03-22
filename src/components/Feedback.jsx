@@ -6,7 +6,9 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import Popup from "./styled/Popup.styled";
 import Polygon from "./Polygon";
-import { preventScroll, resumeScroll } from "../../utils";
+import MaskedInput from "react-text-mask";
+import { preventScroll, resumeScroll, maskPattern } from "../../utils";
+
 
 const Feedback = () => {
   const [correct, setCorrect] = useState(true);
@@ -61,18 +63,18 @@ const Feedback = () => {
           Заполните форму обратной связи и уточните время, когда удобно
           поговорить.
         </p>
-        <form
-          ref={form}
-          className="form"
-          onSubmit={(e) => handleSubmit(e)}
-        >
-          <input
+        <form ref={form} className="form" onSubmit={(e) => handleSubmit(e)}>
+          
+          <MaskedInput
+            mask={maskPattern}
+            guide={true}
             onFocus={() => setCorrect(true)}
             className="form__form-phone"
             name="phone"
             required
             placeholder="Телефон"
             type="tel"
+            showMask={false}
           />
           <div className="incorrect-phone">
             <span>
