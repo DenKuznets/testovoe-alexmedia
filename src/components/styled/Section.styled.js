@@ -6,7 +6,7 @@ const Section = styled.section`
   margin: auto;
   box-shadow: 5px 5px 20px rgba(30, 200, 210, 0.1);
   color: #03032c;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 `;
 
 export default Section
