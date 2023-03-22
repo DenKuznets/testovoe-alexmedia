@@ -10,10 +10,12 @@ import MaskedInput from "react-text-mask";
 import { preventScroll, resumeScroll, maskPattern } from "../../utils";
 
 const Feedback = () => {
+  const telephoneString = "Телефон";
+  const templateString = "+7 (___) ___ __-__";
   const [correct, setCorrect] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [showMask, setShowMask] = useState(false);
-  const [placeHolder, setPlaceHolder] = useState("Телефон")
+  const [placeHolder, setPlaceHolder] = useState(telephoneString)
   const form = useRef("");
   let questionsText = [];
   for (let index = 0; index < 4; index++) {
@@ -56,7 +58,7 @@ const Feedback = () => {
   }
 
   function handleBlur(e) {
-    if (e.target.value === "+7 (___) ___ __-__") {
+    if (e.target.value === templateString) {
       setShowMask(false);
       e.target.value = "";
     }
@@ -99,8 +101,8 @@ const Feedback = () => {
             onFocus={(e) => handleFocus(e)}
             onBlur={(e) => handleBlur(e)}
             onMouseUp={(e) => handleMouseUp(e)}
-            onMouseEnter={() => setPlaceHolder("+7 (___) ___ __-__")}
-            onMouseLeave={() => setPlaceHolder("Телефон")}
+            onMouseEnter={() => setPlaceHolder(templateString)}
+            onMouseLeave={() => setPlaceHolder(telephoneString)}
           />
 
           <div className="incorrect-phone">
